@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Johannes Green - CV</title>
+
+        <style>
+
+            /* prevents a one pixel wide column at the edge
+            of the document in print mode (firefox tested) */
+            @page {
+                size: A4;
+            }
+
+            #A4 {
+                height: 297mm !important;
+                width: 210mm !important;
+            }
+
+            html {
+                background: whitesmoke;
+                font-family: FreeMono, monospace;
+                font-size: 12px;
+                /* center body in viewpart */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+            }
+
+            /* prevents weirdness in print mode (firefox tested) */
+            @media print {
+                html {
+                    min-height: 0;
+                }
+            }
+
+            body {
+                background: white;
+                /* prevents weirdness when padding > 0 in print mode (firefox tested) */
+                box-sizing: border-box;
+                margin: 0 !important;
+                padding: 36px;
+                display: grid;
+                grid-template-columns: 5fr 4fr 36px 4fr;
+                grid-template-rows: auto 12px 5fr;
+                grid-template-areas:
+                    "A B S C"
+                    "P P S C"
+                    "D D S C"
+            }
+
+            table {
+                font-size: 1rem;
+                border-collapse: collapse;
+            }
+
+            td:first-child {
+                padding-right: 7px;
+                vertical-align: top;
+            }
+
+            li {
+                margin: 4px 0;
+            }
+
+            #experience {
+                display: grid;
+                column-gap: 20px;
+                grid-template-columns: 1fr 1fr;
+            }
+
+            #name {
+                font-size: 3.2rem;
+                margin-bottom: 7px;
+                position: relative;
+            }
+
+            #name::before {
+                content: "";
+                background: #000071;
+                position: absolute;
+                height: 75px;
+                width: 26px;
+                left: -43px;
+            }
+
+            #name div:first-child {
+                font-weight: normal;
+            }
+
+            #name div:nth-child(2) {
+                font-weight: bold;
+            }
+
+            #profile-img {
+                height: auto;
+                max-width: 100%;
+            }
+
+            .diamond {
+                position: relative;
+            }
+
+            .diamond::before {
+                content: "";
+                background: #000071;
+                position: absolute;
+                top: 50%;
+                left: -50%;
+                height: 6px;
+                width: 6px;
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+
+            .divider {
+                height: 22px;
+            }
+
+            .header {
+                font-size: 1.5rem;
+                font-weight: bold;
+                line-height: 1.5rem;
+                margin-bottom: 10px;
+            }
+
+            .h-line {
+                background: lightgray;
+                height: 2px;
+                width: 100%;
+            }
+
+            .v-line {
+                background: lightgray;
+                width: 2px;
+                height: 100%;
+            }
+
+            .indent {
+                margin-left: 7px;
+            }
+
+            .space {
+                padding: 7px;
+            }
+
+            .spacer {
+                height: 19px;
+            }
+
+        </style>
+    </head>
+
+
+    <body id="A4">
+
+        <!-- A -->
+        <div class="space" style="grid-area: A">
+
+            <div id="name">
+                <div style="line-height: 2.5rem">JOHANNES</div>
+                <div>GREEN</div>
+            </div>
+
+            <div>IT-SÄKERHETSSPECIALIST STUDENT</div>
+
+            <div class="divider"></div>
+
+            <div id="contact">
+                <div class="header">KONTAKT</div>
+                <div>
+                    Grimmeredsvägen 113<br>
+                    42669 Västra Frölunda<br>
+                    <br>
+                    <b>P:</b> +46 768 346 318<br>
+                    <b>E:</b> johannes.green@iths.se
+                </div>
+            </div>
+
+        </div>
+
+        <!-- B -->
+        <div style="grid-area: B; padding-bottom: 7px">
+            <img id="profile-img" src="profile.jpg" alt="profile picture">
+        </div>
+
+        <!-- S -->
+        <div style="grid-area: S; display: flex; justify-content: center">
+            <div class="v-line"></div>
+        </div>
+
+        <!-- C -->
+        <div style="grid-area: C; display: flex; align-items: center">
+            <div class="space" style="background: whitesmoke; padding-bottom: 25px; padding-top: 25px">
+
+                <div class="header" style="text-align: center;">PROFILE</div>
+                <table>
+                    <tbody> 
+                        <tr><td><b>Ålder</b></td><td>22</td></tr>
+                        <tr><td><b>Nationalitet</b></td><td>Svensk</td></tr>
+                        <tr><td><b>Språk</b></td><td>Svenska, Engelska</td></tr>
+                    </tbody>
+                </table>
+                <br>
+                <b>About</b><br>
+                <div class="indent">
+                    Jag är en mångsidig individ med driv att utöka min kunskap dagligen.<br>
+                    Strävar alltid efter en fokuserad inställning, inriktad på prestation 🔥.
+                </div>
+
+                <div class="spacer"></div>
+                <div class="h-line"></div>
+                <div class="spacer"></div>
+
+                <div class="header" style="text-align: center;">FRAMHÄVDA</div>
+                <div>
+                    <b>LINKEDIN</b><br>
+                    <div class="indent">
+                        linkedin.com/in/johannes-green-8a0244212<br>
+                    </div>
+                    <br>
+                    <b>GITHUB</b><br>
+                    <div class="indent">
+                        github.com/Palsmo
+                    </div>
+                </div>
+
+                <div class="spacer"></div>
+                <div class="h-line"></div>
+                <div class="spacer"></div>
+
+                <div class="header" style="text-align: center;">HOBBY</div>
+                <ul style="margin: 0; padding-left: 7px">
+                    <li>Undersöka och lära om nya ämnen, långdistanslöpning.</li>
+                    <li>Kodning i Python, Zig och Bash.</li>
+                    <li>Få djupare förståelse om datorer, cpu, minne.</li>
+                    <li>Jobba med datorsystem, primärt Linux.</li>
+                    <li>Crackmes och HackTheBox</li>
+                </ul>
+
+                <div class="spacer"></div>
+                <div class="h-line"></div>
+                <div class="spacer"></div>
+
+                <div class="header" style="text-align: center">KUL FAKTA</div>
+                <div>
+                    Bestigit Kebnekaise toppen,<br>
+                    120 ord/m på Dvorak layout,<br>
+                    1% i spelet League of Legends s'23<br>
+                </div>
+
+                <div class="spacer"></div>
+                <div class="h-line"></div>
+                <div class="spacer"></div>
+
+                <div class="header" style="text-align: center">REFERENSER</div>
+                <div>
+                    <b>Emelie Janelöv</b><br>
+                    <b>R:</b> Education Manager<br>
+                    <b>P:</b> +46 701 995 174<br>
+                    <b>E:</b> emelie.janelov@iths.se
+                </div>
+
+            </div>
+        </div>
+
+        <!-- P -->
+        <div style="grid-area: P; display: flex; align-items: center"></div>
+
+        <!-- D -->
+        <div class="space" style="grid-area: D; display: flex; flex-direction: column">
+
+            <div style="display: flex; align-items: center">
+                <div class="header" style="margin-right: 14px">SÖKER</div>
+                <div class="h-line" style="margin-bottom: 8px"></div>
+            </div>
+            <div>
+                Jag är beredd att genomföra praktik på ert företag som del i slutförandet av min
+                utbildning. Perioden som omfattas är 8 veckor (34—41), med start i augusti 2024.
+                I fallet att vi fungerar bra tillsammans finns en andra period (18 veckor) som
+                börjar i januari 2025.
+            </div>
+
+            <div class="spacer"></div>
+            <div class="spacer"></div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; padding: 0 4px">
+                <div>
+                    <div style="text-align: center">2025 jun — 2023 aug</div>
+                    <div style="display: flex; margin: 5px 0">
+                        <div class="diamond"></div>
+                        <div style="background: #000071; height:2px; width: 100%"></div>
+                    </div>
+                    <div style="margin: 0 7px">
+                        <div style="height: 5px"></div>
+                        <div style="text-align: center"><b>IT-SÄKERHETS SPEC.</b><br></div>
+                        <div style="height: 5px"></div>
+                        IT-Högskolan
+                        Göteborg
+                        <div style="height: 5px"></div>
+                        > gnu-Coreutils, server admin., kryptering, omvärdsbevakning ..
+                    </div>
+                </div>
+                <div>
+                    <div style="text-align: center">2023 jan — 2020 aug</div>
+                    <div style="display: flex; margin: 5px 0">
+                        <div class="diamond"></div>
+                        <div style="background: #000071; height: 2px; width: 100%"></div>
+                    </div>
+                    <div style="margin: 0 7px">
+                        <div style="height: 5px"></div>
+                        <div style="text-align: center"><b>DATORTEKNIK</b><br></div>
+                        <div style="height: 5px"></div>
+                        Chalmers Univer..
+                        Göteborg
+                        <div style="height: 5px"></div>
+                        > C, ASM, Java, linjär-algebra, data-strukturer, algoritmer ..
+                    </div>
+                </div>
+                <div>
+                    <div style="text-align: center">2020 jun — 2017 aug</div>
+                    <div style="display: flex; margin: 5px 0">
+                        <div class="diamond"></div>
+                        <div style="background: #000071; height: 2px; width: 100%"></div>
+                        <div class="diamond"></div>
+                    </div>
+                    <div style="margin: 0 7px">
+                        <div style="height: 5px"></div>
+                        <div style="text-align: center"><b>NATURVETENSKAP</b><br></div>
+                        <div style="height: 5px"></div>
+                        Rudbecksgymnasiet
+                        Örebro
+                        <div style="height: 5px"></div>
+                        > bioteknik, mattematik, språk, kärnämnen ..
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div style="display: flex; align-items: center">
+                <div class="header" style="margin-right: 14px">ERFARENHET</div>
+                <div class="h-line" style="margin-bottom: 8px"></div>
+            </div>
+
+            <div style="display: flex; flex: 1">
+
+                <div style="background: lightgray; width: 6px"></div>
+                <div style="height: 1px; width: 70px"></div>
+                <div id="experience">
+
+                    <div>
+                        <b>OS- WINDOWS OCH LINUX</b><br>
+                        | 8 veckor<br>
+                        <b>Täckte:</b>
+                        Filsystem, Windows-AD, access-regler, RBAC, 
+                        Powershell & Bash scripting, automation, backup & snapshot strategier.
+                    </div>
+
+                    <div>
+                        <b>PYTHON</b><br>
+                        | 4 veckor<br>
+                        <b>Täckte:</b>
+                        Novis till medel, OOP, algoritmer, datastrukturer, 
+                        projektutveckling, git and Github.
+                    </div>
+
+                    <div>
+                        <b>NÄTVERK</b><br>
+                        | 4 veckor<br>
+                        <b>Täckte:</b>
+                        OSI-modellen, TCP/IP stacken, IoT, protokoll, brandvägg, 
+                        nätverksenheter, enklare arkitektur.
+                    </div>
+
+                    <div>
+                        <b>VIRTUALISERING OCH CLOUD</b><br>
+                        | 10 veckor<br>
+                        <b>Täckte:</b>
+                        HW & OS-virualisering, Hypervisors, Docker, Vagrant, OpenStack, Terraform, Cloud-init.
+                    </div>
+
+                    <div>
+                        <b>KRYPTOLOGI</b><br>
+                        | 6 veckor (pågående)<br>
+                        <b>Täckte:</b>
+                        Sym- & Asymmetrisk kryption, Hashning, KDFs, john, signaturer, PGP ..
+                    </div>
+
+                    <div style="color: #888888">
+                        <b>VIRUSANALYS</b><br>
+                        | 6 veckor ... Ej startat<br>
+                        <b>OMVÄRDSBEVAKNING</b><br>
+                        | 4 veckor ... Ej startat<br>
+                        <b>SPÅRBARHET</b><br>
+                        | 6 veckor ... Ej startat<br>
+                        <b>INCIDENTHANTERING</b><br>
+                        | 4 veckor ... Ej startat<br>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+    </body>
+
+</html>
