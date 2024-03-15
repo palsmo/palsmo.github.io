@@ -44,8 +44,8 @@
                 margin: 0 !important;
                 padding: 36px;
                 display: grid;
-                grid-template-columns: 5fr 4fr 36px 4fr;
-                grid-template-rows: auto 12px 5fr;
+                grid-template-columns: 270px 210px 36px 206px;
+                grid-template-rows: 260px auto 768px;
                 grid-template-areas:
                     "A B S C"
                     "P P S C"
@@ -53,7 +53,6 @@
             }
 
             table {
-                font-size: 1rem;
                 border-collapse: collapse;
             }
 
@@ -68,12 +67,15 @@
 
             #experience {
                 display: grid;
-                column-gap: 20px;
+                column-gap: 25px;
+                row-gap: 15px;
                 grid-template-columns: 1fr 1fr;
+                padding-left: 20px;
+                padding-top: 15px;
             }
 
             #name {
-                font-size: 3.2rem;
+                font-size: 3rem;
                 margin-bottom: 7px;
                 position: relative;
             }
@@ -82,7 +84,7 @@
                 content: "";
                 background: #000071;
                 position: absolute;
-                height: 75px;
+                height: 70px;
                 width: 26px;
                 left: -43px;
             }
@@ -116,7 +118,7 @@
             }
 
             .divider {
-                height: 22px;
+                height: 26px;
             }
 
             .header {
@@ -139,7 +141,7 @@
             }
 
             .indent {
-                margin-left: 7px;
+                padding-left: 7px;
             }
 
             .space {
@@ -187,9 +189,7 @@
         </div>
 
         <!-- S -->
-        <div style="grid-area: S; display: flex; justify-content: center">
-            <div class="v-line"></div>
-        </div>
+        <div style="grid-area: S; display: flex; justify-content: center"></div>
 
         <!-- C -->
         <div style="grid-area: C; display: flex; align-items: center">
@@ -210,9 +210,11 @@
                     I strive to always have a focused mindset, dialed in on being performant 🔥.
                 </div>
 
-                <div class="spacer"></div>
-                <div class="h-line"></div>
-                <div class="spacer"></div>
+                <div style="display: flex; align-items: center; flex-direction: column">
+                    <div class="spacer"></div>
+                    <div class="h-line" style="width: 50%"></div>
+                    <div class="spacer"></div>
+                </div>
 
                 <div class="header" style="text-align: center;">FEATURED</div>
                 <div>
@@ -227,12 +229,14 @@
                     </div>
                 </div>
 
-                <div class="spacer"></div>
-                <div class="h-line"></div>
-                <div class="spacer"></div>
+                <div style="display: flex; align-items: center; flex-direction: column">
+                    <div class="spacer"></div>
+                    <div class="h-line" style="width: 50%"></div>
+                    <div class="spacer"></div>
+                </div>
 
                 <div class="header" style="text-align: center;">HOBBY</div>
-                <ul style="margin: 0; padding-left: 7px">
+                <ul class="indent" style="margin: 0">
                     <li>Reading about new subjects, long distance running.</li>
                     <li>Coding in Python, Zig and Bash.</li>
                     <li>Learning deeper about computers, cpu, memory.</li>
@@ -240,20 +244,24 @@
                     <li>Crackmes and HackTheBox</li>
                 </ul>
 
-                <div class="spacer"></div>
-                <div class="h-line"></div>
-                <div class="spacer"></div>
+                <div style="display: flex; align-items: center; flex-direction: column">
+                    <div class="spacer"></div>
+                    <div class="h-line" style="width: 50%"></div>
+                    <div class="spacer"></div>
+                </div>
 
                 <div class="header" style="text-align: center">FUN FACTS</div>
                 <div>
-                    Has climbed Mt. Kebnekaise,<br>
+                    Has climbed Mt Kebnekaise,<br>
                     120 wpm on Dvorak layout,<br>
                     1% in the game League of Legends s'23<br>
                 </div>
 
-                <div class="spacer"></div>
-                <div class="h-line"></div>
-                <div class="spacer"></div>
+                <div style="display: flex; align-items: center; flex-direction: column">
+                    <div class="spacer"></div>
+                    <div class="h-line" style="width: 50%"></div>
+                    <div class="spacer"></div>
+                </div>
 
                 <div class="header" style="text-align: center">REFERENCE</div>
                 <div>
@@ -273,19 +281,20 @@
         <div class="space" style="grid-area: D; display: flex; flex-direction: column">
 
             <div style="display: flex; align-items: center">
-                <div class="header" style="margin-right: 14px">SEEKING</div>
-                <div class="h-line" style="margin-bottom: 8px"></div>
+                <div class="header" style="margin-bottom: 0; margin-right: 14px">SEEKING</div>
+                <div class="h-line"></div>
             </div>
-            <div>
+            <div style="height: 10px"></div>
+
+            <div style="height: 70px">
                 I want to pursue an internship at your company as part of my education completion.
                 The period would be 8 weeks (34—41), starting in August 2024.
                 In the case we work well together there's a second period  (18 weeks) beginning in January 2025.
             </div>
 
-            <div class="spacer"></div>
-            <div class="spacer"></div>
+            <div class="divider"></div>
 
-            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; padding: 0 4px">
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; height: 166px; padding: 0 4px">
                 <div>
                     <div style="text-align: center">2025 jun — 2023 aug</div>
                     <div style="display: flex; margin: 5px 0">
@@ -340,13 +349,12 @@
             <div class="divider"></div>
 
             <div style="display: flex; align-items: center">
-                <div class="header" style="margin-right: 14px">EXPERIENCE</div>
-                <div class="h-line" style="margin-bottom: 8px"></div>
+                <div class="header" style="margin-bottom: 0; margin-right: 14px">EXPERIENCE</div>
+                <div class="h-line"></div>
             </div>
 
             <div style="display: flex; flex: 1">
 
-                <div style="background: lightgray; width: 8px; margin-right: 20px"></div>
                 <div id="experience">
 
                     <div>
@@ -397,7 +405,6 @@
                         <b>INCIDENT MANAGEMENT</b><br>
                         | 4 weeks ... Not started<br>
                     </div>
-
 
                 </div>
             </div>
